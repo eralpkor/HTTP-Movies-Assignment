@@ -4,6 +4,8 @@ import SavedList from "./Movies/SavedList";
 import MovieList from "./Movies/MovieList";
 import Movie from "./Movies/Movie";
 
+import UpdateMovie from './Movies/UpdateMovie';
+
 const App = () => {
   const [savedList, setSavedList] = useState([]);
 
@@ -21,6 +23,10 @@ const App = () => {
           return <Movie {...props} addToSavedList={addToSavedList} />;
         }}
       />
+      {/* Add a route at the path /update-movie/:id */}
+      <Route path='/update-movie/:id' />
+      {/* <Route path="/movie/create" component={CreateMovie} /> */}
+      <UpdateMovie/>
     </>
   );
 };
